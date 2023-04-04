@@ -21,7 +21,7 @@ jobs:
       
       - name: Upload SBOM
         run: |
-          curl -X "POST" "https://${{ secrets.SECRET_OWASP_DT_HOST }}/api/v1/bom" \
+          curl -X "POST" "http://${{ secrets.SECRET_OWASP_DT_HOST }}/api/v1/bom" \
             -H 'Content-Type: multipart/form-data' \
             -H "X-API-Key: ${{ secrets.SECRET_OWASP_DT_KEY }}" \
             -F "autoCreate=true" \
